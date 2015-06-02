@@ -9,4 +9,6 @@ from EcoSystemProj import RawData
 
 class SolvingBiomass(object):
     
-    def __init__
+    def __init__(self, data):
+        self.data = data
+        self.biomass = None
