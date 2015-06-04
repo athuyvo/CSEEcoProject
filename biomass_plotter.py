@@ -30,7 +30,8 @@ def plotBiomassData(data):
                  alpha=opacity,
                  color='r',
                  label='new data')
-
+    origBiomass
+    newBiomass
     plt.xlabel('Animals')
     plt.ylabel('Biomass (kg)')
     plt.title('Ecosystem Model: Biomass')
