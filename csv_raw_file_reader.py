@@ -55,7 +55,7 @@ class RawData(object):
         BA = np.matrix(x[:, 2])
         tBA = np.transpose(BA)
         BioMass = np.linalg.solve(matrix,tBA)
-        print tBA   
+        print tBA        
         print matrix
         return BioMass
     
@@ -67,7 +67,7 @@ RD = RawData('marine_data.csv')
 RD.DataMatrix()
 
 
-# In[ ]:
+
 
 
 
