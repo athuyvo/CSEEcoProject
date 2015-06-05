@@ -54,10 +54,11 @@ class RawData(object):
         matrix = np.matrix([[x[0][0], 0, 0, 0, 0],[x[0][1], x[1][0], 0, 0, 0], [0, x[1][1], x[2][0], 0, 0], [0, 0, x[2][1],x[3][0],0], [0, 0, 0, x[3][1],x[4][0]]])
         BA = np.matrix(x[:, 2])
         tBA = np.transpose(BA)
-        BioMass = np.linalg.solve(matrix,tBA)
-        print tBA        
-        print matrix
-        return BioMass
+        BioMass = np.array(np.linalg.solve(matrix,tBA))
+        #print tBA        
+        #print matrix
+        tupleBiomass = tuple(BioMass)
+        return tupleBiomass
     
 
 
