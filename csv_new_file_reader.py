@@ -53,11 +53,10 @@ class NewData(object):
         matrix = np.matrix([[x[0][0], 0, 0, 0, 0],[x[0][1], x[1][0], 0, 0, 0], [0, x[1][1], x[2][0], 0, 0], [0, 0, x[2][1],x[3][0],0], [0, 0, 0, x[3][1],x[4][0]]])
         newBA = np.matrix(x[:, 2])
         tnewBA = np.transpose(newBA)
-        NewBioMass = np.array(np.linalg.solve(matrix,tnewBA))
+        NewBioMass = np.linalg.solve(matrix,tnewBA)
         #print tnewBA   
         #print matrix
-        tupleNewBioMass = tuple(NewBioMass)
-        return tupleNewBioMass
+        return NewBioMass
 
 ND = NewData('marine_data_2.csv')
 ND.DataMatrix()
